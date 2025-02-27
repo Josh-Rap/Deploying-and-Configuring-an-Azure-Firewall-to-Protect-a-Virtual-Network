@@ -45,6 +45,7 @@ After downloading the file (`TEST_ELF`), firewall logs confirm the triggered rul
 # Monitoring
 Firewall logs are collected via a **diagnostic rule** and sent to **Log Analytics Workspace** for queries and analysis. A sample query retrieves log details, showing web traffic from the Windows VM (`10.0.0.5`) to an external IP (`20.15.141.193`):  
 ![Firewall Azure Analytics Log Query](/images/FW-KQL.png)
+
 A **workbook dashboard** visualizes firewall activity with key metrics:
 ### Allow vs Deny Actions
 
