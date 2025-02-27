@@ -4,7 +4,7 @@ In this write-up, I deploy an Azure Firewall to control access, block unauthoriz
 
 Below is the final architecture, showing the virtual network with two subnets: one for lab resources and another for the firewall, along with their IP ranges.
 
-![project architecture](/images/FW%20Network%20Topology%20Final%20.jpg)
+![project architecture](/images/FW%20Network%20Topology%20Routing.jpg)
 
 # Deploying the Azure Firewall and Setting Up Routing / Networking
 First, a new subnet is created for the firewall.
@@ -13,7 +13,7 @@ First, a new subnet is created for the firewall.
 Next, the firewall is deployed and details like its name, virtual network, and public IP are specified.  
 ![Firewall deployment](/images/FW-Deploy.png)
 
-To route all traffic through the firewall, a routing table is created with a default route (`0.0.0.0/0`), using the firewall’s private IP as the next hop. This route is then associated with the `default` subnet which contains the resources used in the Azure Honeynet SIEM Project. 
+To route all traffic through the firewall, a routing table is created with a default route (`0.0.0.0/0`), using the firewall’s private IP as the next hop. This route is then associated with the `default` subnet which contains the resources used in the Azure Honeynet SIEM Project. The topology image at the top of the article shows how the route is used. 
 # Configuring the Firewall Rules and Policies
 Firewall rules are organized into collections for DNAT, Network, and Application rules. A few test rules are configured within each collection.
 ![Firewall rule collections](/images/Firewall-Rules-Collections.png)
