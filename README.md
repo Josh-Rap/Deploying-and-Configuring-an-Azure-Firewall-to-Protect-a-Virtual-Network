@@ -3,11 +3,12 @@
 In this write-up, I deploy an Azure Firewall to control access, block unauthorized traffic, and protect my virtual network from threats. This is part of the security measures for my [Azure Honeynet SIEM Project]().
 
 Below is the final architecture, showing the virtual network with two subnets: one for lab resources and another for the firewall, along with their IP ranges.
+
 ![project architecture](/images/FW%20Network%20Topology%20Final%20.jpg)
 
 # Deploying the Azure Firewall and Setting Up Routing / Networking
-First, a new subnet is created for the firewall.  
-![[Firewall subnet creation](/images/FW-Subnet-Creation.png)
+First, a new subnet is created for the firewall.
+![Firewall subnet creation](/images/FW-Subnet-Creation.png)
 
 Next, the firewall is deployed and details like its name, virtual network, and public IP are specified.  
 ![Firewall deployment](/images/FW-Deploy.png)
